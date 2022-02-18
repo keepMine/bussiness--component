@@ -34,7 +34,7 @@
     "minifyWXML": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.19.4",
+  "libVersion": "2.22.0",
   "appid": "wx8218f6346192d60d",
   "projectname": "mineUI",
   "debugOptions": {
