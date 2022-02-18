@@ -1,4 +1,5 @@
 <!--index.wxml-->
 <view class="container">
 home
+<view class="list"></view>
 </view>

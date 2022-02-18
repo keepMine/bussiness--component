@@ -1,8 +1,8 @@
 {
   "pages":[
-    "pages/home/index",
-    "pages/note/index",
-    "pages/my/index"
+    "pages/tabBar/home/index",
+    "pages/tabBar/note/index",
+    "pages/tabBar/my/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -15,17 +15,17 @@
     "backgroundColor": "#ffffff",
     "selectedColor": "#000000",
     "list": [
-      {"pagePath": "pages/home/index",
-        "text": "首页",
+      {"pagePath": "pages/tabBar/home/index",
+        "text": "组件",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/homed.png"
       },
-      {"pagePath": "pages/note/index",
+      {"pagePath": "pages/tabBar/note/index",
         "text": "笔记",
         "iconPath": "images/note.png",
         "selectedIconPath": "images/noted.png"
       },
-      {"pagePath": "pages/my/index",
+      {"pagePath": "pages/tabBar/my/index",
         "text": "我的",
         "iconPath": "images/my.png",
         "selectedIconPath": "images/myd.png"
