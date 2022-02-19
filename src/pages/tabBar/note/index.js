@@ -11,71 +11,46 @@ Page({
   data: {
     title: 'lancome',
     imgHost,
+    height: app.globalData.height * 2,
     banner: [
       {
-        img: `${imgHost}garden-banner-b-1-1.png`,
-        img2: `${imgHost}tansuo-s-1-1.png`,
+        img: `../../../images/p-1.jpeg`,
+        img2: `../../../images/p-2.jpg`,
         path: '/pages/garden/gardenProduct/gardenProduct',
-        title: '种草社区',
-        des: '「明星产品邀你测评」',
+        title: '框架篇',
+        des: '「vue、react的秘境」',
         id: 0,
+        name: '进入框架的世界'
       },
       {
-        img: `${imgHost}garden-banner-b-3.png`,
-        img2: `${imgHost}tansuo-s-2.png`,
+        img: `../../../images/p1-1.jpeg`,
+        img2: `../../../images/p-3.jpeg`,
         path: '',
-        title: '全线产品',
-        des: '「兰蔻家族系列产品手册」',
+        title: 'HTML',
+        des: '「html中探索结构之美」',
         id: 1,
+        name: '进入HTML的世界'
       },
       {
-        img: `${imgHost}garden-banner-b-4-1.png`,
-        img2: `${imgHost}tansuo-s-3.png`,
+        img: `../../../images/p1-2.jpeg`,
+        img2: `../../../images/p-4.jpeg`,
         path: '/pages/garden/gardenStoryDetail/gardenStoryDetail',
-        title: '品牌故事',
-        des: '「了解品牌故事及最新动态」',
+        title: 'CSS',
+        des: '「css中探索样式之美」',
         id: 2,
+        name: '进入CSS的世界'
       },
       {
-        img: `${imgHost}live-bj-2-1.png`,
-        img2: `${imgHost}tansuo-s-4.2.png`,
+        img: `../../../images/p1-3.jpeg`,
+        img2: `../../../images/p-5.jpeg`,
         path: '/pages/live/live',
-        title: '独家教学',
-        des: '「产品干货直播揭秘」',
+        title: 'JS',
+        des: '「js中探索逻辑之美」',
         id: 3,
+        name: '进入JS的世界'
       },
-      {
-        img: `${imgHost}garden-banner-b-1-1.png`,
-        img2: `${imgHost}tansuo-s-1-1.png`,
-        path: '/pages/garden/gardenProduct/gardenProduct',
-        title: '种草社区',
-        des: '「明星产品邀你测评」',
-        id: 0,
-      },
-      {
-        img: `${imgHost}garden-banner-b-3.png`,
-        img2: `${imgHost}tansuo-s-2.png`,
-        path: '',
-        title: '全线产品',
-        des: '「兰蔻家族系列产品手册」',
-        id: 1,
-      },
-      {
-        img: `${imgHost}garden-banner-b-4-1.png`,
-        img2: `${imgHost}tansuo-s-3.png`,
-        path: '/pages/garden/gardenStoryDetail/gardenStoryDetail',
-        title: '品牌故事',
-        des: '「了解品牌故事及最新动态」',
-        id: 2,
-      },
-      {
-        img: `${imgHost}live-bj-2-1.png`,
-        img2: `${imgHost}tansuo-s-4.2.png`,
-        path: '/pages/live/live',
-        title: '独家教学',
-        des: '「产品干货直播揭秘」',
-        id: 3,
-      },
+      
+     
     ],
     imgHost,
     bannerIndex: -1,
@@ -96,6 +71,7 @@ Page({
   },
   touchStart(e) {
     start = e.changedTouches[0].clientY;
+    this.stopPlay();
   },
   touchEnd(e) {
     end = e.changedTouches[0].clientY;
@@ -142,13 +118,14 @@ Page({
     }
   },
   goNext(e) {
-    // this.stopPlay();
+    
     let bannerIndex;
     let oldBannerIndex = this.data.bannerIndex;
     let banner = this.data.banner;
     let len = banner.length;
     let data = {};
     if (e) {
+      this.stopPlay();
       let index = e.currentTarget.dataset.index;
       bannerIndex = index - 1;
       for (let i = oldBannerIndex + 1; i < index; i++, len++) {

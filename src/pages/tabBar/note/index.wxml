@@ -22,7 +22,7 @@
     },
   }
 </wxs>
-<view class="garden-index" bindtouchstart="touchStart" bindtouchend="touchEnd">
+<view class="garden-index"  bindtouchstart="touchStart" bindtouchend="touchEnd">
   <view class="banner-wrapper">
     <view class="swiper">
       <block wx:for="{{banner}}" wx:key="index">
@@ -35,10 +35,13 @@
           data-id="{{id}}"
           bind:tap="goPath"
         >
-        <!-- <view class="item-detail" wx:if="{{index-bannerIndex > 1}}" data-index="{{index}}" catch:tap="goNext">
-            <view class="title">{{item.title}}</view>
-            <view class="des">{{item.des}}</view>
-          </view> -->
+        <view class="item-detail-p" wx:if="{{index >= bannerIndex}}" data-index="{{index}}" catch:tap="goNext">
+            <view class="title">{{item.name}}</view>
+            <view class="btn">
+            立即进入
+            <icon class="iconfont icon-xiayige" style="font-size: 40rpx;" />
+            </view>
+          </view>
         </view>
         <view
           wx:if="{{index > bannerIndex + 1}}"
@@ -48,6 +51,10 @@
           data-index="{{index}}"
           bind:tap="goNext"
         >
+        <view class="item-detail" wx:if="{{index-bannerIndex > 1}}" data-index="{{index}}" catch:tap="goNext">
+            <view class="title">{{item.title}}</view>
+            <view class="des">{{item.des}}</view>
+          </view>
         </view>
       </block>
     </view>

@@ -12,8 +12,15 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
     })
+    wx.getSystemInfo({
+      success: (res) => {
+        console.log(res)
+        this.globalData.height = res.screenHeight
+      }
+    })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    height: ''
   }
 })

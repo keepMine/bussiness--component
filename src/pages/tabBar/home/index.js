@@ -65,7 +65,7 @@ Page({
   },
 
   onLoad() {
-  
+    console.log(app.globalData)
   },
 
   /** 绑定事件 */

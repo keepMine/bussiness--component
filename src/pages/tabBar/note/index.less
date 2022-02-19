@@ -2,7 +2,7 @@
 
 .garden-index {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   .banner-wrapper {
     height: 100vh;
@@ -19,6 +19,31 @@
         background-size: 100%;
         background-position-y: 0;
         position: absolute;
+        .item-detail-p {
+          position: absolute;
+          bottom: 100rpx;
+          left: 50rpx;
+          color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          .btn {
+            margin-top: 20rpx;
+            width: 250rpx;
+            height: 100rpx;
+            border-radius: 50rpx;
+            background-color: #fff;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20rpx 0 25rpx;
+            box-sizing: border-box;
+            font-size: 32rpx;
+            line-height: 100rpx;
+          }
+        }
         .item-detail {
           height: 202rpx;
           color: #fff;
