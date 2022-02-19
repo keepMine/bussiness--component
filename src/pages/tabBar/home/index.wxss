@@ -1,0 +1,53 @@
+page {
+  background: #F6F6F6;
+}
+.container {
+  padding: 30rpx 40rpx;
+}
+.container .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .top .tips {
+  font-size: 32rpx;
+  color: #4e4a4a;
+  padding-left: 10rpx;
+  padding-top: 8rpx;
+}
+.container .list {
+  margin-top: 20rpx;
+}
+.container .list .item {
+  background-color: #fff;
+  min-height: 100rpx;
+  margin-bottom: 20rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 40rpx;
+  font-weight: 400;
+}
+.container .list .item .parent {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .list .item .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.container .list .item .content .items {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

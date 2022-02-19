@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <icon class="iconfont icon-toufangwei" style="font-size: 140rpx;" />
+    <view class="tips">
+        记录工作学习中一些常用组件，以及各种动画效果。
+    </view>
+  </view>
+    <view class="list" >
+      <view wx:for="{{lists}}" wx:key="index" class="item" bindtap="clickItem" data-index="{{index}}">
+      <view class="parent">
+        {{item.name}}
+        <icon class="iconfont {{item.type == '1'? 'icon-shaixuan-zhankai': 'icon-shouqi'}}" style="font-size: 40rpx; color: #888;" />
+      </view>
+      <view class="content"  wx:if="{{item.type == '2'}}">
+        <view class="items" wx:for="{{item.childrens}}" wx:for-index="cindex" wx:key="cindex" style="{{cindex != item.childrens.length - 1? 'border-bottom: 2rpx solid #F6F6F6;':' '}}" catchtap="checkToChildren">
+          {{item.name}}
+          <icon class="iconfont icon-xiayige" style="font-size: 32rpx; color: #888;" />
+        </view>
+      </view>
+      </view>
+    </view>
+</view>

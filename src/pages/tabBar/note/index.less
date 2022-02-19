@@ -1,0 +1,206 @@
+
+
+.garden-index {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  .banner-wrapper {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    .swiper {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      .swiper-item {
+        height: 856rpx;
+        width: 100%;
+        background-size: 100%;
+        background-position-y: 0;
+        position: absolute;
+        .item-detail {
+          height: 202rpx;
+          color: #fff;
+          font-weight: 500;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: rgba(0, 0, 0, 0.3);
+          .title {
+            font-size: 42rpx;
+            line-height: 59rpx;
+          }
+          .des {
+            font-size: 24rpx;
+            line-height: 40rpx;
+          }
+        }
+      }
+      .swiper-x {
+        top: -856rpx;
+      }
+      .swiper-0 {
+        top: 0;
+      }
+      .swiper-1 {
+        top: 856rpx;
+      }
+      .swiper-2 {
+        top: 1056rpx;
+      }
+      .swiper-3 {
+        top: 1256rpx;
+      }
+      .swiper-4 {
+        top: 1456rpx;
+      }
+      .swiper-5 {
+        top: 1656rpx;
+      }
+      .swiper-6 {
+        top: 1856rpx;
+      }
+      .swiper-7 {
+        top: 2056rpx;
+      }
+      .swiper-animation-0 {
+        animation: swiperItem0 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-1 {
+        animation: swiperItem1 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-2 {
+        animation: swiperItem2 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-3 {
+        animation: swiperItem3 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-4 {
+        animation: swiperItem4 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-5 {
+        animation: swiperItem5 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-6 {
+        animation: swiperItem6 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .swiper-animation-7 {
+        animation: swiperItem7 1s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+      }
+      .mask {
+        position: absolute;
+        top: 856rpx;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+  .up {
+    position: fixed;
+    height: 64rpx;
+    width: 64rpx;
+    top: 856rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.4;
+  }
+}
+
+@keyframes swiperItem0
+{
+	from {
+    top: 0;
+  }
+	to {
+    top: -856rpx;
+  }
+}
+
+@keyframes swiperItem1
+{
+	from {
+    top: 856rpx;
+  }
+	to {
+    top: 0;
+  }
+}
+
+@keyframes swiperItem2
+{
+	from {
+    top: 1056rpx;
+  }
+	to {
+    top: 856rpx;
+  }
+}
+
+@keyframes swiperItem3
+{
+	from {
+    top: 1256rpx;
+  }
+	to {
+    top: 1056rpx;
+  }
+}
+
+@keyframes swiperItem4
+{
+	from {
+    top: 1456rpx;
+  }
+	to {
+    top: 1256rpx;
+  }
+}
+
+@keyframes swiperItem5
+{
+	from {
+    top: 1656rpx;
+  }
+	to {
+    top: 1456rpx;
+  }
+}
+
+@keyframes swiperItem6
+{
+	from {
+    top: 1856rpx;
+  }
+	to {
+    top: 1656rpx;
+  }
+}
+
+@keyframes swiperItem7
+{
+	from {
+    top: 2056rpx;
+  }
+	to {
+    top: 1856rpx;
+  }
+}

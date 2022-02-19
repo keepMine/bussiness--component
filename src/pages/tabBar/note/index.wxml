@@ -1,0 +1,56 @@
+<wxs module="tool">
+  module.exports = {
+    getSwiperClass: function(index, bannerIndex) {
+      var res = ''
+      if (bannerIndex === -1) {
+        res = index
+      } else if (index - bannerIndex < 0) {
+        res = 'x'
+      } else if (index - bannerIndex > 6) {
+        res = '7'
+      } else {
+        res = index - bannerIndex
+      }
+      return 'swiper-' + res
+    },
+    getSwiperAnimationClass: function(index, bannerIndex) {
+      var res = ''
+      if (bannerIndex !== -1) {
+        res = index - bannerIndex
+      }
+      return 'swiper-animation-' + res
+    },
+  }
+</wxs>
+<view class="garden-index" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="banner-wrapper">
+    <view class="swiper">
+      <block wx:for="{{banner}}" wx:key="index">
+        <view
+          wx:if="{{index >= bannerIndex}}"
+          class="swiper-item {{tool.getSwiperClass(index, bannerIndex)}} {{tool.getSwiperAnimationClass(index, bannerIndex)}}"
+          style="background-image: url({{item.img}});"
+          data-item="{{item}}"
+          data-index="{{index}}"
+          data-id="{{id}}"
+          bind:tap="goPath"
+        >
+        <!-- <view class="item-detail" wx:if="{{index-bannerIndex > 1}}" data-index="{{index}}" catch:tap="goNext">
+            <view class="title">{{item.title}}</view>
+            <view class="des">{{item.des}}</view>
+          </view> -->
+        </view>
+        <view
+          wx:if="{{index > bannerIndex + 1}}"
+          class="swiper-item {{tool.getSwiperClass(index, bannerIndex)}} {{tool.getSwiperAnimationClass(index, bannerIndex)}}"
+          style="background-image: url({{item.img2}});height: 201rpx"
+          data-item="{{item}}"
+          data-index="{{index}}"
+          bind:tap="goNext"
+        >
+        </view>
+      </block>
+    </view>
+  </view>
+  <image class="up" src="{{imgHost}}garden-up.png" />
+</view>

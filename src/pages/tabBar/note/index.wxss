@@ -1,0 +1,188 @@
+.garden-index {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+.garden-index .banner-wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.garden-index .banner-wrapper .swiper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.garden-index .banner-wrapper .swiper .swiper-item {
+  height: 856rpx;
+  width: 100%;
+  background-size: 100%;
+  background-position-y: 0;
+  position: absolute;
+}
+.garden-index .banner-wrapper .swiper .swiper-item .item-detail {
+  height: 202rpx;
+  color: #fff;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.3);
+}
+.garden-index .banner-wrapper .swiper .swiper-item .item-detail .title {
+  font-size: 42rpx;
+  line-height: 59rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-item .item-detail .des {
+  font-size: 24rpx;
+  line-height: 40rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-x {
+  top: -856rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-0 {
+  top: 0;
+}
+.garden-index .banner-wrapper .swiper .swiper-1 {
+  top: 856rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-2 {
+  top: 1056rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-3 {
+  top: 1256rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-4 {
+  top: 1456rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-5 {
+  top: 1656rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-6 {
+  top: 1856rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-7 {
+  top: 2056rpx;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-0 {
+  animation: swiperItem0 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-1 {
+  animation: swiperItem1 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-2 {
+  animation: swiperItem2 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-3 {
+  animation: swiperItem3 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-4 {
+  animation: swiperItem4 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-5 {
+  animation: swiperItem5 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-6 {
+  animation: swiperItem6 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .swiper-animation-7 {
+  animation: swiperItem7 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.garden-index .banner-wrapper .swiper .mask {
+  position: absolute;
+  top: 856rpx;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
+}
+.garden-index .up {
+  position: fixed;
+  height: 64rpx;
+  width: 64rpx;
+  top: 856rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.4;
+}
+@keyframes swiperItem0 {
+  from {
+    top: 0;
+  }
+  to {
+    top: -856rpx;
+  }
+}
+@keyframes swiperItem1 {
+  from {
+    top: 856rpx;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes swiperItem2 {
+  from {
+    top: 1056rpx;
+  }
+  to {
+    top: 856rpx;
+  }
+}
+@keyframes swiperItem3 {
+  from {
+    top: 1256rpx;
+  }
+  to {
+    top: 1056rpx;
+  }
+}
+@keyframes swiperItem4 {
+  from {
+    top: 1456rpx;
+  }
+  to {
+    top: 1256rpx;
+  }
+}
+@keyframes swiperItem5 {
+  from {
+    top: 1656rpx;
+  }
+  to {
+    top: 1456rpx;
+  }
+}
+@keyframes swiperItem6 {
+  from {
+    top: 1856rpx;
+  }
+  to {
+    top: 1656rpx;
+  }
+}
+@keyframes swiperItem7 {
+  from {
+    top: 2056rpx;
+  }
+  to {
+    top: 1856rpx;
+  }
+}

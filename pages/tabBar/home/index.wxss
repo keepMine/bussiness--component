@@ -1,5 +1,0 @@
-.container .list {
-  width: 100rpx;
-  height: 100rpx;
-  background-color: aquamarine;
-}
