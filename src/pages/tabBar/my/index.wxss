@@ -1,0 +1,11 @@
+.container .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .box .avatar {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
