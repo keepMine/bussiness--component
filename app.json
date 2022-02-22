@@ -33,6 +33,19 @@
       }
     ]
   },
+  "subpackages": [
+    {
+      "root": "pages/common",
+      "name": "common",
+      "pages": [
+        "css-world/index",
+        "js-world/index",
+        "html-world/index",
+        "vue-world/index",
+        "webpack-world/index"
+      ]
+    }
+  ],
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
