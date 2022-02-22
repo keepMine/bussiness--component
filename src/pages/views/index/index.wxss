@@ -1,1 +1,71 @@
-/* src/pages/views/index/index.wxss */
+.js-world-page .content-form {
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+.js-world-page .content-form .mb-40 {
+  margin-bottom: 40rpx;
+}
+.js-world-page .content-form .mt-20 {
+  margin-top: 20rpx;
+}
+.js-world-page .content-form .title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #222222;
+}
+.js-world-page .content-form .mb-20 {
+  margin-bottom: 20rpx;
+}
+.js-world-page .content-form .ipt {
+  height: 98rpx;
+  border-radius: 10rpx;
+  border: 2rpx solid #BBBBBB;
+  padding: 0 33rpx;
+}
+.js-world-page .content-form .bg {
+  background: #F6F6F6;
+}
+.js-world-page .content-form .ipt-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+.js-world-page .content-form .ipt-box .tips-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 20rpx;
+}
+.js-world-page .btn-box {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30rpx;
+  padding: 30rpx 40rpx;
+}
+.js-world-page .btn-box::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 750px;
+  height: 2rpx;
+  background: #EEEEEE;
+}
+.js-world-page .btn-box .btn {
+  min-width: 300rpx;
+  height: 98rpx;
+  background: #000000;
+  border-radius: 49rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.js-world-page .btn-box .btn .txt {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+}

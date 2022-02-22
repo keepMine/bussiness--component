@@ -1,6 +1,48 @@
 <view class="js-world-page">
-index
-<view>
-  哈哈哈哈哈哈哈哈
-</view>
+	<view class="content-form">
+		<view class="line mb-40" />
+		<view class="title mb-20">
+			待加密字段
+		</view>
+		<input class="ipt mb-40" value="{{formData.name}}" placeholder="请输入待加密字段值" 	placeholder-style="font-size: 32rpx" type="text" focus="true" data-key="name" bindinput="inputName" >
+			
+		</input>
+    <view class="ipt-box">
+      <view class="tips-box">
+          <view class="title mb-20">
+          key
+        </view>
+        <input class="ipt" placeholder="请输入加密key值" placeholder-style="font-size: 32rpx"  data-key="key" value="{{formData.key}}" bindinput="inputName" >
+        </input>
+      </view>
+      <view class="tips-box" style="margin: 0;">
+          <view class="title mb-20">
+          iv
+        </view>
+        <input class="ipt" placeholder="请输入加密iv值" placeholder-style="font-size: 32rpx" data-key="iv" value="{{formData.iv}}" bindinput="inputName" >
+        </input>
+      </view>
+    </view>
+
+		<view class="title mb-20">
+			已加密结果
+		</view>
+		<input class="ipt bg" disabled="true" value="{{formatData.result}}"  >
+			
+		</input>
+    <view class="title mt-20 mb-20">
+			已解密结果
+		</view>
+		<input class="ipt bg" disabled="true" value="{{formatData.name}}"  >
+			
+		</input>
+	</view>
+		<view class="btn-box" >
+			<view class="btn">
+				<view class="txt" bindtap="encrypt">3DES加密</view>
+	    </view>
+      <view class="btn">
+				<view class="txt" bindtap="unEncrypt">3DES解密</view>
+	    </view>
+	  </view>
 </view>
