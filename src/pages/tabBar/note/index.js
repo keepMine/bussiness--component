@@ -119,7 +119,7 @@ Page({
        
       ]
       this.setData({
-        successImgList: val,
+        successImgList: val, 
         banner,
       },
       () => {
