@@ -35,7 +35,7 @@
           data-id="{{id}}"
           bind:tap="goPath"
         >
-        <view class="item-detail-p" wx:if="{{index >= bannerIndex}}" data-index="{{index}}" catch:tap="goNext">
+        <view class="item-detail-p" wx:if="{{index == bannerIndex + 1}}" data-index="{{index}}" catch:tap="goNext">
             <view class="title">{{item.name}}</view>
             <view class="btn">
             立即进入

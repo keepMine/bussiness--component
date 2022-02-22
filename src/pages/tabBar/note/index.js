@@ -12,56 +12,38 @@ Page({
     title: 'lancome',
     imgHost,
     height: app.globalData.height * 2,
-    banner: [
-      {
-        img: `../../../images/p-1.jpeg`,
-        img2: `../../../images/p-2.jpg`,
-        path: '/pages/garden/gardenProduct/gardenProduct',
-        title: '框架篇',
-        des: '「vue、react的秘境」',
-        id: 0,
-        name: '进入框架的世界'
-      },
-      {
-        img: `../../../images/p1-1.jpeg`,
-        img2: `../../../images/p-3.jpeg`,
-        path: '',
-        title: 'HTML',
-        des: '「html中探索结构之美」',
-        id: 1,
-        name: '进入HTML的世界'
-      },
-      {
-        img: `../../../images/p1-2.jpeg`,
-        img2: `../../../images/p-4.jpeg`,
-        path: '/pages/garden/gardenStoryDetail/gardenStoryDetail',
-        title: 'CSS',
-        des: '「css中探索样式之美」',
-        id: 2,
-        name: '进入CSS的世界'
-      },
-      {
-        img: `../../../images/p1-3.jpeg`,
-        img2: `../../../images/p-5.jpeg`,
-        path: '/pages/live/live',
-        title: 'JS',
-        des: '「js中探索逻辑之美」',
-        id: 3,
-        name: '进入JS的世界'
-      },
-      
-     
-    ],
+    banner: [],
     imgHost,
     bannerIndex: -1,
     is_ad_popup:0,//广告弹窗
     ad_popup:{},
     advertiseModal:false,
-  
+    imgList: [
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-1.jpeg', 
+      '	cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-2.jpg', 
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-3.jpeg', 
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-4.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-5.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p1-1.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p1-2.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p1-3.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p-6.jpeg',
+      'cloud://cloud1-8gpys0qhdc919f2f.636c-cloud1-8gpys0qhdc919f2f-1309693043/p1-6.jpeg'
+    ],
+    successImgList: []
   },
 
   onLoad() {
-  
+    const noteImg = wx.getStorageSync('noteImg')
+    console.log('缓存中的数据', noteImg)
+    if(!noteImg.length) {
+      this.downImage()
+    }else {
+      this.setData({
+        banner: noteImg
+      })
+    }
+    
   },
   onShow() {
     this.autoPlay();
@@ -69,6 +51,84 @@ Page({
   onHide() {
     this.stopPlay();
   },
+  /** 云开发函数 */
+  downImage() {
+    let list = []
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+    });
+    const {imgList} = this.data
+    imgList.forEach(el => {
+     const proRes = wx.cloud.downloadFile({
+        fileID: el, // 文件 ID
+      })
+      list.push(proRes)
+    });
+    console.log('后端返回的img', list)
+    Promise.all(list).then((val)=> {
+      console.log('--最终去异步后的img集合--', val)
+      wx.hideLoading();
+      const banner = [
+        {
+          img: val[0].tempFilePath,
+          img2: val[1].tempFilePath,
+          path: '/pages/garden/gardenProduct/gardenProduct',
+          title: '框架篇',
+          des: '「vue、react的秘境」',
+          id: 0,
+          name: '进入框架的世界'
+        },
+        {
+          img: val[5].tempFilePath,
+          img2: val[2].tempFilePath,
+          path: '',
+          title: 'HTML',
+          des: '「html中探索结构之美」',
+          id: 1,
+          name: '进入HTML的世界'
+        },
+        {
+          img: val[6].tempFilePath,
+          img2: val[3].tempFilePath,
+          path: '/pages/garden/gardenStoryDetail/gardenStoryDetail',
+          title: 'CSS',
+          des: '「css中探索样式之美」',
+          id: 2,
+          name: '进入CSS的世界'
+        },
+        {
+          img: val[7].tempFilePath,
+          img2: val[4].tempFilePath,
+          path: '/pages/live/live',
+          title: 'JS',
+          des: '「js中探索逻辑之美」',
+          id: 3,
+          name: '进入JS的世界'
+        },
+        
+        {
+          img: val[8].tempFilePath,
+          img2: val[9].tempFilePath,
+          path: '/pages/live/live',
+          title: '工程化',
+          des: '「webpack等系列问题」',
+          id: 3,
+          name: '进入工程化的世界'
+        }
+       
+      ]
+      this.setData({
+        successImgList: val,
+        banner,
+      },
+      () => {
+        wx.setStorageSync('noteImg', banner)
+      })
+    })
+  },
+  
+  /**绑定函数 */
   touchStart(e) {
     start = e.changedTouches[0].clientY;
     this.stopPlay();
