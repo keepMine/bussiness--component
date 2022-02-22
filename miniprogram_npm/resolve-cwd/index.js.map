@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.js"],"names":[],"mappings":";;;;;;;AAAA;AACA;AACA;AACA;AACA;AACA","file":"index.js","sourcesContent":["\nconst resolveFrom = require('resolve-from');\n\nmodule.exports = moduleId => resolveFrom(process.cwd(), moduleId);\nmodule.exports.silent = moduleId => resolveFrom.silent(process.cwd(), moduleId);\n"]}
