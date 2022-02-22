@@ -35,7 +35,7 @@
   },
   "subpackages": [
     {
-      "root": "pages/common",
+      "root": "src/pages/common",
       "name": "common",
       "pages": [
         "css-world/index",
@@ -43,6 +43,13 @@
         "html-world/index",
         "vue-world/index",
         "webpack-world/index"
+      ]
+    },
+    {
+      "root": "src/pages/views",
+      "name": "views",
+      "pages":[
+        "index/index"
       ]
     }
   ],

@@ -13,7 +13,7 @@
         <icon class="iconfont {{item.type == '1'? 'icon-shaixuan-zhankai': 'icon-shouqi'}}" style="font-size: 40rpx; color: #888;" />
       </view>
       <view class="content"  wx:if="{{item.type == '2'}}">
-        <view class="items" wx:for="{{item.childrens}}" wx:for-index="cindex" wx:key="cindex" style="{{cindex != item.childrens.length - 1? 'border-bottom: 2rpx solid #F6F6F6;':' '}}" catchtap="checkToChildren">
+        <view class="items" wx:for="{{item.childrens}}" wx:for-index="cindex" wx:key="cindex" style="{{cindex != item.childrens.length - 1? 'border-bottom: 2rpx solid #F6F6F6;':' '}}" data-item="{{item}}" catchtap="checkToChildren">
           {{item.name}}
           <icon class="iconfont icon-xiayige" style="font-size: 32rpx; color: #888;" />
         </view>

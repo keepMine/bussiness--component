@@ -73,7 +73,7 @@ Page({
         {
           img: val[0].tempFilePath,
           img2: val[1].tempFilePath,
-          path: '/pages/common/vue-world/index',
+          path: '/src/pages/common/vue-world/index',
           title: '框架篇',
           des: '「vue、react的秘境」',
           id: 0,
@@ -82,7 +82,7 @@ Page({
         {
           img: val[5].tempFilePath,
           img2: val[2].tempFilePath,
-          path: '/pages/common/html-world/index',
+          path: '/src/pages/common/html-world/index',
           title: 'HTML',
           des: '「html中探索结构之美」',
           id: 1,
@@ -91,7 +91,7 @@ Page({
         {
           img: val[6].tempFilePath,
           img2: val[3].tempFilePath,
-          path: '/pages/common/css-world/index',
+          path: '/src/pages/common/css-world/index',
           title: 'CSS',
           des: '「css中探索样式之美」',
           id: 2,
@@ -100,7 +100,7 @@ Page({
         {
           img: val[7].tempFilePath,
           img2: val[4].tempFilePath,
-          path: '/pages/common/js-world/index',
+          path: '/src/pages/common/js-world/index',
           title: 'JS',
           des: '「js中探索逻辑之美」',
           id: 3,
@@ -110,7 +110,7 @@ Page({
         {
           img: val[8].tempFilePath,
           img2: val[9].tempFilePath,
-          path: '/pages/common/webpack-world/index',
+          path: '/src/pages/common/webpack-world/index',
           title: '工程化',
           des: '「webpack等系列问题」',
           id: 3,

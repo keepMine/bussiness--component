@@ -11,11 +11,12 @@ Page({
         childrens: [
           {
             name: '头部导航组件',
-          
+            id: 1,
+            path: '/src/pages/views/index/index'
           },
           {
             name: '侧边栏组件',
-            
+            id: 2,
           },
         ]
       },
@@ -25,10 +26,11 @@ Page({
         childrens: [
           {
             name: '头部导航组件',
-          
+            id: 3,
           },
           {
             name: '侧边栏组件',
+            id: 4,
             
           },
         ]
@@ -39,11 +41,11 @@ Page({
         childrens: [
           {
             name: '滑动渐入渐出组件',
-          
+            id: 5,
           },
           {
             name: '自动滚动组件',
-            
+            id: 6,
           },
         ]
       },
@@ -53,11 +55,11 @@ Page({
         childrens: [
           {
             name: 'dialog组件',
-          
+            id: 7,
           },
           {
             name: 'popup组件',
-            
+            id: 8,
           },
         ]
       },
@@ -86,6 +88,12 @@ Page({
   },
   checkToChildren(e) {
     console.log(e)
+    const {item} = e.currentTarget.dataset
+    if(item.id === 1) {
+      wx.navigateTo({
+        url: item.path,
+    })
   }
-
+  }
 })
+
